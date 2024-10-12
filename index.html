@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Cakes</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#cart">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Landing Page / Hero Section -->
+    
+    <section class="hero">
+        <div class="banner">
+            <img src="images/banner.jpg" alt="Cake Banner" class="banner-image">
+        </div>
+
+        <!-- Text and Button Below the Banner -->
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Cake Haven!</h1>
+            <p class="hero-subtitle">Delicious cakes for every occasion.</p>
+            <a href="#cakes" class="hero-button">Order Now</a>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p>We bake fresh, beautiful cakes with love.</p>
+    </section>
+
+    <!-- Cake Categories -->
+    <section id="categories">
+        <h2>Our Cakes</h2>
+        <div class="cake-grid">
+            <div class="cake-card">
+                <img src="images/cake1.jpg" alt="Birthday Cake"width="300" height="300">
+                <h3>Birthday Cake</h3>
+                <p>Price: Rs.390</p>
+                <button onclick="addToCart('Birthday Cake', 30)">Add to Cart</button>
+            </div>
+            <div class="cake-card">
+                <img src="images/cake2.jpg" alt="Wedding Cake" width="300" height="300">
+                <h3>Wedding Cake</h3>
+                <p>Price: Rs.450</p>
+                <button onclick="addToCart('Wedding Cake', 50)">Add to Cart</button>
+            </div>
+            <!-- Add more cake cards as needed -->
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery">
+        <h2>Cake Gallery</h2>
+        <div class="gallery-grid">
+            <img src="images/cake1.jpg" alt="Cake Image" width="400" height="300">
+            <img src="images/cake2.jpg" alt="Cake Image 2" width="400" height="300">
+            <img src="images/cake3.jpg" alt="Cake Image 3" width="400" height="300">
+            <img src="images/cake4.jpg" alt="Cake Image 3" width="400" height="300">
+            <img src="images/cake5.jpg" alt="Cake Image 3" width="400" height="300">
+            <img src="images/cake6.jpg" alt="Cake Image 3" width="400" height="300">
+            <img src="images/cake7.jpg" alt="Cake Image 3" width="400" height="300">
+            <!-- Add more images -->
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <form id="testimonial-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="review" placeholder="Your Review" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="reviews"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Cake Haven | Follow us on social media</p>
+    </footer>
+
+    <!-- Shopping Cart Modal (Optional) -->
+    <div id="cart-modal" class="cart-modal">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: $<span id="total-price">0</span></p>
+        <button onclick="checkout()">Checkout</button>
+        <button onclick="closeCart()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
